@@ -1,7 +1,9 @@
-import Image from "next/image";
+import BentoGrid from "@/components/BentoGrid";
 
 export default function Home() {
   return (
-    <p>Hello everbody</p>
+    <>
+    <BentoGrid spacing={30}/>
+    </>
   );
 }
