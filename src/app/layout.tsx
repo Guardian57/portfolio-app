@@ -15,7 +15,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Jake Aicher",
-  description: "The portfolio of Jake Aicher",
+  description: "The portfolio of the UX Designer Jake Aicher",
 };
 
 export default function RootLayout({
@@ -28,15 +28,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="min-h-screen flex flex-col default-margin">
-          <main className="mx-auto w-full">
+        {/* Header goes here */}
+        
+        <main>
           {children}
+        </main>
 
-          </main>
-        
-
-        </div>
-        
+        {/* Footer goes here */}
       </body>
     </html>
   );
