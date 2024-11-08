@@ -19,7 +19,7 @@ const ProjectOverview = ({summary, duration, role, team, deliverables, skills}: 
             <div className="w-full h-auto flex flex-row">
                 <div className="basis-11/12 h-auto pl-12 pr-8 pt-10 pb-11 box-border flex flex-col gap-12 text-base">
                     <div className="w-full h-auto flex flex-col gap-3"> 
-                        <h1 className="font-semibold">Summary</h1>
+                        {/* <h1 className="font-semibold">Summary</h1> */}
                         {summary.map((text, key) => <p className="leading-6" key={key}>{text}</p>)}
                     </div>
                     <div className="w-full h-auto">
