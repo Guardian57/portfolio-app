@@ -1,8 +1,12 @@
 "use client"
 import { useState, useRef, useEffect } from "react";
 
+interface BentoGridProps {
+    spacing: number;
+    children?: React.ReactNode;
+}
 
-const BentoGrid = ({spacing}: {spacing: number}) => {
+const BentoGrid = ({spacing,children}: BentoGridProps) => {
     const containerRef = useRef <HTMLDivElement> (null);
     const [containerWidth, setContainerWidth] = useState(1112);
 
@@ -27,48 +31,13 @@ const BentoGrid = ({spacing}: {spacing: number}) => {
     return (
         <div 
         ref={containerRef}
-        className={`w-full h-auto grid grid-cols-3 p-3 box-border`}
+        className={`w-full h-auto grid grid-cols-3 p-8 box-border`}
         style={{
             gap: `${spacing * (containerWidth/1112)}px`,
         }}
         >
-            <div className="w-auto h-auto rounded-xl border-solid border-2 aspect-square"
-            style={{
-                gridArea: "1 / 1 / span 2/ span 2",
+            {children}
             
-            }}
-            >
-
-            </div>
-            <div className="w-auto h-auto rounded-xl border-solid border-2"
-             style={{
-                gridArea: "1 / 3 / span 2/ span 1",
-            
-            }}
-            >
-
-            </div>
-            <div className="w-auto h-auto rounded-xl border-solid border-2 aspect-square">
-
-            </div>
-            <div className="w-auto h-auto rounded-xl border-solid border-2 aspect-square">
-
-            </div>
-            <div className="w-auto h-auto rounded-xl border-solid border-2 aspect-square">
-
-            </div>
-            <div className="w-auto h-auto rounded-xl border-solid border-2 aspect-square">
-
-            </div>
-            <div className="w-auto h-auto rounded-xl border-solid border-2 aspect-square">
-
-            </div>
-            <div className="w-auto h-auto rounded-xl border-solid border-2 aspect-square">
-
-            </div>
-            <div className="w-auto h-auto rounded-xl border-solid border-2 aspect-square">
-
-            </div>
         </div>
     )
 }
