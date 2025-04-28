@@ -18,20 +18,20 @@ export default function Home() {
                 gridArea: "1 / 3 / span 2/ span 1",
             
             }}
-            >
-
-            </div>
-
+            ></div>
+            </BentoGrid>
+            
+            <BentoGrid spacing={30}>
             <div className="w-auto h-auto rounded-xl border-solid border-2"
             style={{
-                    gridArea: "3 / 1 /span 2/ span 1",
+                    gridArea: "1 / 1 /span 2/ span 1",
                 
                 }}
             >
             </div>
             <div className="w-auto h-auto rounded-xl border-solid border-2"
                 style={{
-                    gridArea: "3 / 2 /span 1/ span 2",
+                    gridArea: "1 / 2 /span 1/ span 2",
                 
                 }}
             >
