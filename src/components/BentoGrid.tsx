@@ -31,14 +31,13 @@ const BentoGrid = ({spacing,children}: BentoGridProps) => {
     return (
         <div 
         ref={containerRef}
-        className={`w-full h-auto grid grid-cols-3 p-8 box-border`}
+        className={`w-full h-auto grid grid-cols-3 mb-16 mt-8 pr-8 pl-8 box-border`}
         style={{
             gap: `${spacing * (containerWidth/1112)}px`,
             gridAutoRows: "1fr", //makes sure that gird units stay the same height as other rows when height or aspect is not specified
         }}
         >
             {children}
-            
         </div>
     )
 }

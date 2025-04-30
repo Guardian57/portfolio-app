@@ -5,6 +5,20 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  
+  --shadow-color: 0deg 0% 0%;
+  --shadow-elevation-low:
+    0.2px 0.3px 0.4px hsl(var(--shadow-color) / 0.44),
+    0.6px 1.2px 1.5px -2.5px hsl(var(--shadow-color) / 0.44);
+  --shadow-elevation-medium:
+    0.2px 0.3px 0.4px hsl(var(--shadow-color) / 0.61),
+    3.1px 6.1px 7.7px -2.5px hsl(var(--shadow-color) / 0.61);
+  --shadow-elevation-high:
+    0.2px 0.3px 0.4px hsl(var(--shadow-color) / 0.76),
+    3.2px 6.4px 8px -1.2px hsl(var(--shadow-color) / 0.76),
+    14.3px 28px 35.4px -2.5px hsl(var(--shadow-color) / 0.76);
+  
 }
 
 .breakout {
@@ -34,9 +48,42 @@
 }
 
 
+.cell-hover {
+  transform: translate(0px,0px) (100%);
+  box-shadow: 
+  var(--shadow-elevation-low)
+  ;
+  transition: all 100ms ease-in-out;
+}
+
+.cell-hover:hover {
+  transform: translate(-5px,-10px) scale(103%);
+  box-shadow: 
+  var(--shadow-elevation-medium)
+  ;
+  transition: all 100ms ease-in-out;
+}
 
 
+.cell-hover:hover .hero_bg {
+  transform: scale(100%);
+  transition: all 100ms ease-in-out;
+}
 
+.cell-hover:hover .hero_subject {
+  transform: scale(133%) translateY(-2%);
+  transition: all 100ms ease-in-out;
+}
+
+.hero_bg {
+  transform: scale(140%);
+  transition: all 100ms ease-in-out;
+}
+
+.hero_subject {
+  transform: scale(100%);
+  transition: all 100ms ease-in-out;
+}
 
 
 
