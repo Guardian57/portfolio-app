@@ -1,5 +1,6 @@
 import Image from "next/image";
 import BentoGrid from "@/components/BentoGrid";
+import ScrollingMarquee from "@/components/ScrollingMarquee";
 
 
 export default function Home() {
@@ -90,7 +91,21 @@ export default function Home() {
 
             </div>
             </BentoGrid>
-            
+        </div>
+            {/* Section Heading */}
+
+            <div className="w-full border-t-4 border-b-4 border-black">
+              <ScrollingMarquee>
+                <div className="flex items-center justify-evenly gap-5">
+                  <div className="w-fit h-fit text-3xl font-bold font-[Roboto] float-left uppercase">Featured Projects</div>
+                  <div className="w-2 h-2 bg-black rounded-full mr-6"></div>
+                </div>
+              </ScrollingMarquee>
+            </div>
+
+            {/* Featured Projects Grid */}
+
+            <div className="xl:w-[1112px] m-auto mt-14">
             <BentoGrid spacing={30}>
             <div className="w-auto h-auto rounded-xl outline-2 outline outline-[#e5e7eb] cell-hover"
             style={{
@@ -123,7 +138,7 @@ export default function Home() {
 
             </div>
             </BentoGrid>
-      </div>
+            </div>
     </>
     
   );
