@@ -18,11 +18,7 @@ const ScrollingMarquee = ({children}: {children: React.ReactNode}) =>{
     }, []);
 
     const getWidthOfElement = (Widthelement:HTMLDivElement) => {
-        const boundingRect = Widthelement.getBoundingClientRect()
-        
-
-        return boundingRect.width
-
+        return Widthelement.getBoundingClientRect().width
     } 
 
     
@@ -30,7 +26,13 @@ const ScrollingMarquee = ({children}: {children: React.ReactNode}) =>{
 
 return(
     <>
-    <div className="w-full h-fit flex flex-row text-nowrap overflow-x-hidden">
+    <div className="w-full h-fit overflow-x-hidden">
+        <div className="flex flex-row text-nowrap"
+        style={{
+            transform: `translateX(${0}px)`,
+        }}
+        > {/* this div is for transforms*/}
+            
         <div 
         className="w-fit h-fit"
         ref={contentWidthRef}
@@ -38,7 +40,7 @@ return(
             {children}
         </div>
         
-        {Array.from({length: 10}).map((_,i) => (
+        {Array.from({length: 5}).map((_,i) => (
             <React.Fragment key={i}>
                 {React.Children.map(children, (child) => 
 
@@ -52,7 +54,7 @@ return(
 
 
         ))}
-        
+        </div>
     </div>
     </>
 
