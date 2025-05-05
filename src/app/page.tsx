@@ -122,7 +122,7 @@ export default function Home() {
             >
 
             </div>
-            <div className="w-auto h-auto rounded-xl border-solid border-2 aspect-square">
+            <div className="w-auto h-auto rounded-xl border-solid border-2 aspect-square cell-hover">
 
             </div>
             <div className="w-auto h-auto rounded-xl border-solid border-2 aspect-square">
@@ -138,6 +138,17 @@ export default function Home() {
 
             </div>
             </BentoGrid>
+            </div>
+
+            {/* Section Heading */}
+
+            <div className="w-full border-t-4 border-b-4 border-black">
+              <ScrollingMarquee>
+                <div className="flex items-center justify-evenly gap-5">
+                  <div className="w-fit h-fit text-3xl font-bold font-[Roboto] float-left uppercase">About Me</div>
+                  <div className="w-2 h-2 bg-black rounded-full mr-6"></div>
+                </div>
+              </ScrollingMarquee>
             </div>
     </>
     
