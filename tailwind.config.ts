@@ -13,7 +13,7 @@ const config: Config = {
         foreground: "var(--foreground)",
         "logo-blue": "#00a6e9",
         "logo-dark-blue": "#0F204F",
-        "alabaster": "#EAE5D7",
+        "alabaster": "#F8F6F2",
         "isabel": "#EDEAE8",
         "snow": "#FFFBFF",
       },
