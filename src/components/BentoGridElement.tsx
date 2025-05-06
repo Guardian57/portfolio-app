@@ -1,3 +1,4 @@
+import React from "react"
 
 interface BentoGridElementProps{
     row:number,
@@ -5,19 +6,20 @@ interface BentoGridElementProps{
     cellHeight:number,
     cellWidth:number,
     className?:string,
+    children?: React.ReactNode;
 }
 
 
-export const BentoGridElement = ({row, column, cellHeight,cellWidth, className}:BentoGridElementProps) => {
+export const BentoGridElement = ({row, column, cellHeight,cellWidth, className, children}:BentoGridElementProps) => {
 
     return (
         <>
-            <div className={`w-auto h-auto ${className}`}
+            <div className={`w-full h-full ${className}`}
             style={{
               gridArea: `${row} / ${column} /span ${cellHeight}/ span ${cellWidth}`, 
           }}
             >
-                
+                {children}
             </div>
         </>
     )

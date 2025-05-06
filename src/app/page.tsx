@@ -1,22 +1,22 @@
 import Image from "next/image";
 import BentoGrid from "@/components/BentoGrid";
 import ScrollingMarquee from "@/components/ScrollingMarquee";
+import { BentoGridElement } from "@/components/BentoGridElement";
 
 
 export default function Home() {
   return (
     <>
-      <div className="xl:w-[1112px] m-auto mt-14">
+      <div className="bento-grid:w-[1112px] m-auto mt-14">
         <BentoGrid spacing={30}>
           <div className="w-auto h-auto rounded-xl border-solid border-2 aspect-square"
             style={{
                 gridArea: "1 / 1 / span 2/ span 2",
-            
             }}
             >
               {/* Header Title Card */}
               
-              <div className="w-full h-full p-[8%]">
+              <div className="w-full h-full p-20">
                 
               <div className="w-full h-full flex flex-col justify-center gap-20">
                 
@@ -34,11 +34,11 @@ export default function Home() {
                   {/* <h2 className="w-full  text-4xl font-[Roboto] font-medium text-slate-700">
                     Motion Designer
                   </h2> */}
-                  <h2 className=" font-[Roboto]">
-                    <span className="text-4xl">I am a <span className="font-bold text-[#00A6E9]">Motion Designer</span>,</span> 
+                  <h2 className="font-[Roboto]">
+                    <span className="text-4xl">I am a <span className="font-bold text-logo-blue">Motion Designer</span>,</span> 
                   </h2>
                   <p className="mt-4 font-[Roboto]">
-                    creating ready-to-post 2D & 3D content from concept to sound design. My specialty is creating unconventional visuals for fashion and furniture.
+                    creating ready-to-post 2D & 3D content from concept to sound design.<br></br> My specialty is creating unconventional visuals for fashion and furniture.
                   </p>
                 </div>
               </div>
@@ -105,26 +105,90 @@ export default function Home() {
 
             {/* Featured Projects Grid */}
 
-            <div className="xl:w-[1112px] m-auto mt-14">
+            <div className="bento-grid:w-[1112px] m-auto mt-14">
             <BentoGrid spacing={30}>
-            <div className="w-auto h-auto rounded-xl outline-2 outline outline-[#e5e7eb] cell-hover"
+            {/* <div className="w-auto h-auto rounded-xl outline-2 outline outline-[#e5e7eb] cell-hover"
             style={{
                     gridArea: "1 / 1 /span 2/ span 1",
                 
                 }}
             >
+            </div> */}
+            
+            <BentoGridElement 
+            row={1} 
+            column={1} 
+            cellHeight={2} 
+            cellWidth={1} 
+            className="rounded-xl border-solid border-2 cell-hover overflow-hidden"
+            >
+            <div className="w-full h-full">
+              <img className="w-full h-full object-cover scale-[128%] hover:scale-100 transition-transform" src="/work/Pigeon/Bird.png" />
+              
             </div>
-            <div className="w-auto h-auto rounded-xl outline-2 outline outline-[#e5e7eb] cell-hover"
+
+
+            </BentoGridElement>
+
+            {/* <div className="w-auto h-auto rounded-xl outline-2 outline outline-[#e5e7eb] cell-hover"
                 style={{
                     gridArea: "1 / 2 /span 1/ span 2",
                 
                 }}
+            > 
+            </div>
+             */}
+
+            <BentoGridElement 
+            row={1} 
+            column={2} 
+            cellHeight={1} 
+            cellWidth={2} 
+            className="rounded-xl border-solid border-2 cell-hover"
+            />
+
+            {/* <div className="w-auto h-auto rounded-xl border-solid border-2 cell-hover"
+            style={{
+              gridArea: "2 / 2 /span 1/ span 1",
+          
+          }}
+            >
+                
+            </div> */}
+
+            <BentoGridElement 
+            row={2} 
+            column={2} 
+            cellHeight={1} 
+            cellWidth={1} 
+            className="group rounded-xl border-solid border-2 cell-hover overflow-hidden"
             >
 
-            </div>
-            <div className="w-auto h-auto rounded-xl border-solid border-2 aspect-square cell-hover">
+            <div className="w-full h-full absolute">
+              <img className="w-full h-full object-cover overflow-visible scale-[100%] translate-x-[0px] translate-y-[0px] group-hover:scale-[128%] transition-transform" src="/work/Pigeon/Bird.png" />
+              <div
+              className="w-full h-0 absolute bottom-0 left-0 right-0 group-hover:h-full transition-[height] duration-500 bg-slate-100"
+              >
+                <div className="w-full h-full flex flex-col justify-evenly p-10">
+                  <div className="text-[Roboto] font-bold text-2xl">
+                    Sending My Resume via Carrier Pigeon
+                  </div>
+                  <div className="w-full h-1 scale-x-0 group-hover:scale-x-100 ease-in duration-500 transition-transform  bg-slate-200 rounded-full ">
 
+                  </div>
+
+                  <div className="text-[Roboto] text-xl">
+                    Designing a shoe for MSCHF and sending it via carrier pigeon 
+                  </div>
+
+
+                </div>
+              </div>
             </div>
+
+
+            </BentoGridElement>
+
             <div className="w-auto h-auto rounded-xl border-solid border-2 aspect-square">
 
             </div>
