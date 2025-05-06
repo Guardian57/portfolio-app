@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 
+
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,6 +8,7 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    
     extend: {
       colors: {
         background: "var(--background)",
@@ -16,6 +18,9 @@ const config: Config = {
         "alabaster": "#F8F6F2",
         "isabel": "#EDEAE8",
         "snow": "#FFFBFF",
+      },
+      screens: {
+        'bento-grid':'69.5rem', 
       },
     },
   },
