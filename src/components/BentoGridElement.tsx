@@ -1,4 +1,6 @@
-import React from "react"
+"use client"
+import React, { useState, createContext } from "react"
+import { hoverContext } from "@/hooks/useHover"
 
 interface BentoGridElementProps{
     row:number,
@@ -10,7 +12,11 @@ interface BentoGridElementProps{
 }
 
 
-export const BentoGridElement = ({row, column, cellHeight,cellWidth, className, children}:BentoGridElementProps) => {
+
+export const BentoGridElement = ({row, column, cellHeight, cellWidth, className, children}:BentoGridElementProps) => {
+    
+    
+    const [hovered, setHovered] = useState(false); 
 
     return (
         <>
@@ -18,10 +24,13 @@ export const BentoGridElement = ({row, column, cellHeight,cellWidth, className, 
             style={{
               gridArea: `${row} / ${column} /span ${cellHeight}/ span ${cellWidth}`, 
           }}
+            onPointerEnter={() => setHovered(true)}
+            onPointerLeave={() => setHovered(false)}
             >
+                <hoverContext.Provider value={{hovered}}>
                 {children}
+                </hoverContext.Provider>
             </div>
         </>
     )
-
 }
