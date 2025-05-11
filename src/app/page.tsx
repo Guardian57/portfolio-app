@@ -2,6 +2,8 @@ import Image from "next/image";
 import BentoGrid from "@/components/BentoGrid";
 import ScrollingMarquee from "@/components/ScrollingMarquee";
 import { BentoGridElement } from "@/components/BentoGridElement";
+import { CardImage } from "@/components/CardImage";
+import { CardContentContainer } from "@/components/CardContentContainer";
 
 
 export default function Home() {
@@ -163,7 +165,7 @@ export default function Home() {
             cellWidth={1} 
             className="group rounded-xl border-solid border-2 cell-hover overflow-hidden"
             >
-
+            
             <div className="w-full h-full absolute">
               <img className="w-full h-full object-cover overflow-visible scale-[100%] translate-x-[0px] translate-y-[0px] group-hover:scale-[128%] transition-transform" src="/work/Pigeon/Bird.png" />
               <div
@@ -185,7 +187,34 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            
+            </BentoGridElement>
 
+            <BentoGridElement 
+            row={2} 
+            column={3} 
+            cellHeight={2} 
+            cellWidth={1} 
+            className="group rounded-xl border-solid border-2 cell-hover overflow-hidden"
+            >
+            
+            <CardImage src="/work/Pigeon/Bird.png" imgScalePercentage={{initial:100,zoom:128}} imgTranslateOnHover={{x:'10', y:'-50'}} rotation={0} rotationOnHover={-10}/>
+              <CardContentContainer background="#FFFFFF" xTransitionDir="left" yTransitionDir="none" half="verticle" swapEndPos={true}>
+                <div className="w-full h-full flex flex-col justify-evenly p-10">
+                  <div className="text-[Roboto] font-bold text-2xl">
+                    Sending My Resume via Carrier Pigeon
+                  </div>
+                  <div className="w-full h-1 scale-x-0 group-hover:scale-x-100 ease-in duration-500 transition-transform  bg-slate-200 rounded-full ">
+
+                  </div>
+
+                  <div className="text-[Roboto] text-xl">
+                    Designing a shoe for MSCHF and sending it via carrier pigeon 
+                  </div>
+
+
+                </div>
+              </CardContentContainer>
 
             </BentoGridElement>
 
