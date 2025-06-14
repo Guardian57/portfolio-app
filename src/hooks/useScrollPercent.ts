@@ -3,7 +3,10 @@ import { useState, useEffect,} from "react";
 function getWindowInfo(){
     const {innerHeight, scrollY} = window;
     const scrollheight = document.documentElement.scrollHeight;
-    const scrollPercentage = (scrollY / (scrollheight - innerHeight)) * 100
+    const maxScroll = scrollheight - innerHeight;
+    const scrollPercentage = maxScroll > 0 
+    ? (scrollY / maxScroll) * 100 
+    : 0;
 
     return {
        scrollPercentage
