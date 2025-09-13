@@ -57,7 +57,7 @@ export default function Home() {
             
             }}
             >
-              <div className="w-full h-full absolute outline-2 outline outline-[#e5e7eb] overflow-hidden rounded-xl"
+              <div className="w-full h-full absolute outline-2 outline-solid outline-[#e5e7eb] overflow-hidden rounded-xl"
               >
                 <Image 
                 width={810}
@@ -111,7 +111,7 @@ export default function Home() {
 
             <div className="bento-grid:w-[1112px] m-auto mt-14">
             <BentoGrid spacing={30}>
-            {/* <div className="w-auto h-auto rounded-xl outline-2 outline outline-[#e5e7eb] cell-hover"
+            {/* <div className="w-auto h-auto rounded-xl outline-2 outline-solid outline-[#e5e7eb] cell-hover"
             style={{
                     gridArea: "1 / 1 /span 2/ span 1",
                 
@@ -134,7 +134,7 @@ export default function Home() {
 
             </BentoGridElement>
 
-            {/* <div className="w-auto h-auto rounded-xl outline-2 outline outline-[#e5e7eb] cell-hover"
+            {/* <div className="w-auto h-auto rounded-xl outline-2 outline-solid outline-[#e5e7eb] cell-hover"
                 style={{
                     gridArea: "1 / 2 /span 1/ span 2",
                 

@@ -27,7 +27,7 @@ const ProjectOverview = ({summary, duration, role, team, deliverables, skills}: 
                         {skills?.map((skill, key) => <p className="float-left" key={key}>{key !== 0 ? ", " : ""} {skill}</p>)}
                     </div>
                 </div>
-                <div className=" h-auto pl-6 pr-12 pt-10 pb-11  box-border flex flex-col gap-4 flex-grow">
+                <div className=" h-auto pl-6 pr-12 pt-10 pb-11  box-border flex flex-col gap-4 grow">
                     <div>
                         <h1 className="font-semibold float-left">Duration: &nbsp;</h1>
                         <p className="float-left leading-6">{duration}</p>
