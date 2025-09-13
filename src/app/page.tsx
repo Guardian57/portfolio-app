@@ -4,11 +4,13 @@ import ScrollingMarquee from "@/components/ScrollingMarquee";
 import { BentoGridElement } from "@/components/BentoGridElement";
 import { CardImage } from "@/components/CardImage";
 import { CardContentContainer } from "@/components/CardContentContainer";
+import Postcard from "@/components/Postcard";
 
 
 export default function Home() {
   return (
     <>
+      <Postcard></Postcard>
       <div className="bento-grid:w-[1112px] m-auto mt-14">
         <BentoGrid spacing={30}>
           <div className="w-auto h-auto rounded-xl border-solid border-2 aspect-square"
@@ -243,6 +245,17 @@ export default function Home() {
                 </div>
               </ScrollingMarquee>
             </div>
+
+            {/* ABOUT ME */}
+
+            <div className="bento-grid:w-[1112px] m-auto mt-14">
+              <div className="p-14 font-[Roboto]">
+                My mission is to build things that spark curiosity and inspire new ways of seeing the world. It’s not enough to simply build what I imagined; I needed to share it in ways that are visually compelling and thought-provoking. My design process is an extension of this pursuit, always searching for ideas that stand apart, not just trendy, but meaningful. Whether through product design, visual storytelling, or interactive experiences, I aim to craft work that surprises, delights, and invites others to think differently.
+              </div>
+
+            </div>
+
+            
     </>
     
   );
