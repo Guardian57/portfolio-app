@@ -52,13 +52,13 @@ const Postcard = () => {
             CardClasses = 'top-1/2 -translate-y-1/2'
         } else {
             if(b < 50){
-                triggerClasses = '-bottom-[101vh] bg-opacity-0'
+                triggerClasses = '-bottom-[101vh] bg-logo-blue/0' 
                 CardClasses = 'top-0'
             } else if (b < 90){
-                triggerClasses = '-bottom-[90vh] bg-opacity-0'
+                triggerClasses = '-bottom-[90vh] bg-logo-blue/0'
                 CardClasses = 'top-1/2 group-hover:top-0'
             } else {
-                triggerClasses = '-bottom-[90vh] bg-opacity-0'
+                triggerClasses = '-bottom-[90vh] bg-logo-blue/0'
                 CardClasses = 'top-0 group-hover:-top-10'
             } 
         }
@@ -80,7 +80,7 @@ const Postcard = () => {
 
             {/* TRIGGER ZONE - for triggering the expansion and hover effects */}
 
-            <div className={`fixed w-full h-full flex flex-wrap bg-logo-blue translat ${classes.trigger} z-50 group justify-center transition-all duration-500`}
+            <div className={`fixed w-full h-full flex flex-wrap bg-logo-blue ${classes.trigger} z-50 group justify-center transition-all duration-500`}
            
             onPointerDown={() => {expanded ? setExpanded(false) : null}}
             >
