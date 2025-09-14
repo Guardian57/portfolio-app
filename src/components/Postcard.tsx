@@ -49,11 +49,11 @@ const Postcard = () => {
         
         if (expanded){
             triggerClasses = 'bottom-0 bg-logo-blue/90'
-            CardClasses = 'top-1/2 -translate-y-1/2 -rotate-x-180'
+            CardClasses = 'top-1/2 -translate-y-1/2'
         } else {
             if(b < 50){
                 triggerClasses = '-bottom-[101vh] bg-logo-blue/0' 
-                CardClasses = 'top-0'
+                CardClasses = 'top-0 rotate-x-0'
             } else if (b < 90){
                 triggerClasses = '-bottom-[90vh] bg-logo-blue/0'
                 CardClasses = 'top-1/2 group-hover:top-0'
@@ -80,14 +80,38 @@ const Postcard = () => {
 
             {/* TRIGGER ZONE - for triggering the expansion and hover effects */}
 
-            <div className={`fixed w-full h-full flex flex-wrap bg-logo-blue perspective-midrange ${classes.trigger} z-50 group justify-center transition-all duration-500`}
+            <div className={`fixed w-full h-full flex flex-wrap bg-logo-blue flip-card ${classes.trigger} z-10 group justify-center transition-all duration-500`}
+            
            
             onPointerDown={() => {expanded ? setExpanded(false) : null}}
             >
-                <div className={`absolute w-1/2 h-1/2 bg-[#f2e2b7] z-50 drop-shadow-2xl ${classes.card} transition-all transform-3d duration-500`}
+                
+                <div className={`relative w-1/2 h-1/2 shadow flip-card-inner ${classes.card} ${expanded ? "flip" : ''}`}
+                
                 onPointerDown={pointDown}
                 >
+
+                    {/* CARD FRONT */}
+                    <div className={`absolute w-full h-full bg-[#f2e2b7] rotate-x-0 rounded-md overflow-hidden flip-card-front`}
+                    style={{
+                    boxShadow: "0 25px 50px -12px rgba(0,0,0,0.2)",
+                    }}
+                    > 
+                    </div>
+                    
+                    {/* CARD BACK */}
+                    <div className={`absolute w-full h-full bg-stone-100 rounded-md overflow-hidden flip-card-back`}
+                    style={{
+                    boxShadow: "0 25px 50px 12px rgba(0,0,0,0.2)",
+                    }}
+                    > 
+                    </div>
+                
                 </div>
+
+                
+
+
 
             </div>
 
